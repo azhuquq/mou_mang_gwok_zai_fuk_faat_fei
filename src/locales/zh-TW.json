@@ -1,0 +1,66 @@
+{
+  "route": {
+    "home": "首頁",
+    "accessCode": "訪問碼",
+    "getsnguide": "如何獲取序列號？",
+    "giveticket": "發票",
+    "debug": "偵錯菜單"
+  },
+  "home": {
+    "promptReadCard": "掃描您的卡",
+    "manualInputMode": "iPhone用戶 / 瀏覽器不支援NFC / 手動模式",
+    "readAccessCodeMode": "讀取訪問碼模式",
+    "noNFCInfo": "您的瀏覽器不支援NFC",
+    "startReading": "開始讀卡",
+    "nfcPermissionDenied": "NFC權限被拒絕",
+    "retryRequestPermission": "再試一次獲取NFC權限",
+    "requestNFCPermission": "申請獲取NFC權限",
+    "manualInputTitle": "手動輸入模式",
+    "manualInputSubtitle": "輸入卡片序列號（不是訪問代碼）",
+    "manualInputPlaceholder": "Serial number",
+    "manualInputGuideLinkText": "怎麽獲得？",
+    "manualInputNext": "繼續"
+  },
+  "toast": {
+    "invalidCard": "無效的Amusement IC卡",
+    "copySuccess": "已複製",
+    "invalidSerial": "無效的序列號"
+  },
+  "footer": {
+    "TOS": "禁止將這個網頁應用程式用於商業目的。\n您將對使用該應用程式的後果負責，例如賬號被封禁，等等。"
+  },
+  "setting": {
+    "privacyMode": "隱私模式"
+  },
+  "errorCode": {
+    "200": "成功",
+    "400": "網絡請求錯誤",
+    "500": "伺服器内部錯誤",
+    "40001": "您的卡片序列號有問題",
+    "40002": "您的卡片序列號有問題",
+    "40011": "您已經有一張票了",
+    "40012": "無法操作",
+    "40013": "您已經登錄了",
+    "40014": "發生意外錯誤",
+    "default": "未知錯誤"
+  },
+  "common": {
+    "retry": "再試一次"
+  },
+  "accessCode": {
+    "yourAccessCodeText": "這張卡的access code是",
+    "shortcut": "捷徑",
+    "privacyModeTip": "提示：啟用隱私模式時，您仍然可以通過按一下「Aimeサービスサイト」來快速註冊這張卡"
+  },
+  "getsnguide": {
+    "step1": "用支持NFC的機器去AppStore (iPhone)或Google Play (Android)下載「NFC Tools」",
+    "step2": "打開App，在App裏面拍卡",
+    "step3": "複製「Serial number」那個欄位（旁邊有個鑰匙的圖標）",
+    "finish": "明白了，這就試試"
+  },
+  "giveTicket": {
+    "getTicketFirst": "發一張票給我",
+    "refreshTicket": "再發一張",
+    "lastRequestTitle": "最近一次執行的結果"
+  }
+}

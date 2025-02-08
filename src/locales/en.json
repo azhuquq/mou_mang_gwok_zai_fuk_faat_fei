@@ -1,0 +1,66 @@
+{
+  "route": {
+    "home": "Home",
+    "accessCode": "Access Code",
+    "getsnguide": "How to get serial number?",
+    "giveticket": "Give Ticket",
+    "debug": "Debug"
+  },
+  "home": {
+    "promptReadCard": "Scan your card",
+    "manualInputMode": "iPhone user / no NFC support / manual mode",
+    "readAccessCodeMode": "Read Access Code mode",
+    "noNFCInfo": "Your browser don't support NFC",
+    "startReading": "Start reading",
+    "nfcPermissionDenied": "NFC permission denied",
+    "retryRequestPermission": "Retry request permission",
+    "requestNFCPermission": "Request NFC permission",
+    "manualInputTitle": "Manual Input",
+    "manualInputSubtitle": "Input card serial number (not access code)",
+    "manualInputPlaceholder": "Serial number",
+    "manualInputGuideLinkText": "How to get it?",
+    "manualInputNext": "Continue"
+  },
+  "toast": {
+    "invalidCard": "Invalid Amusement IC card",
+    "copySuccess": "Copied",
+    "invalidSerial": "Invalid Serial number"
+  },
+  "footer": {
+    "TOS": "It is forbidden to use this web application for commercial purposes. You will be responsible for the consequences of using this application, such as banning your account, etc."
+  },
+  "setting": {
+    "privacyMode": "Privacy mode"
+  },
+  "errorCode": {
+    "200": "Success",
+    "400": "Bad request",
+    "500": "Internal Server Error",
+    "40001": "Your card serial is empty or invalid",
+    "40002": "Your card serial is invalid",
+    "40011": "You already have a ticket",
+    "40012": "Unable to operate",
+    "40013": "You are already logged in",
+    "40014": "Unexpected error occurred",
+    "default": "Unknown error"
+  },
+  "common": {
+    "retry": "Retry"
+  },
+  "accessCode": {
+    "yourAccessCodeText": "The access code of this card is",
+    "shortcut": "shortcuts",
+    "privacyModeTip": "Tip: When you enable privacy mode, you still can register this card quickly by tapping \"Aimeサービスサイト\""
+  },
+  "getsnguide": {
+    "step1": "Use phone which supprot NFC and go AppStore (iPhone) or Google Play (Android) download \"NFC Tools\"",
+    "step2": "Open the App and Approach your card in the App",
+    "step3": "Copy \"Serial number\" field (with a key icon next to it)",
+    "finish": "Finish Guide"
+  },
+  "giveTicket": {
+    "getTicketFirst": "Give me a ticket",
+    "refreshTicket": "Give me a ticket again",
+    "lastRequestTitle": "Last run result"
+  }
+}

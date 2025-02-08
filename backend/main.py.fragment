@@ -1,0 +1,73 @@
+@app.errorhandler(404)
+def page_not_found(e):
+    return jsonify("别整尬的"), 418
+
+@app.errorhandler(405)
+def method_not_allowed(e):
+    return jsonify("别整尬的"), 418
+
+@app.errorhandler(400)
+def bad_request(e):
+    return jsonify({"code": 400, "data": "badRequest", "msg": "Error: Bad Request"}), 400
+
+@app.errorhandler(500)
+def internal_server_error(e):
+    return jsonify({"code": 500, "data": "internalServerError", "msg": "Error: Internal Server Error"}), 500
+
+@app.route("/")
+def index():
+    return jsonify("别整尬的"), 418
+
+@app.route("/felica", methods=['POST'])
+def felica_lookup():
+    IDm = request.json.get('idm')
+    if IDm is None or len(str(IDm)) != 16:
+        code = 40001
+        data = None
+        msg = "Error: Your IDm is empty or invalid"
+    else:
+        info = felica(IDm)
+        if info == "00000000000000000000":
+            code = 40002
+            data = None
+            msg = "Error: Your IDm is invalid"
+        else:
+            code = 200
+            data = info
+            msg = "Success"
+    data = jsonify({"code": code, "data": data, "msg": msg})
+    return data
+
+@app.route("/ticket", methods=['POST'])
+def ticket():
+    IDm = request.json.get('idm')
+    if IDm is None or len(str(IDm)) != 16:
+        code = 40001
+        msg = "Error: Your IDm is empty or invalid"
+    else:
+        userId = aimedb_userId(IDm)[0]
+        accessCode = aimedb_userId(IDm)[1]
+        timestamp = int(time.time())
+        if '{"chargeId": 6, "stock": 1' in json.dumps(charge(userId)):
+            code = 40011
+            msg = "You already have a ticket"
+        else:
+            login_data = login(userId, accessCode, timestamp)
+            if login_data['returnCode'] == 102:
+                code = 40012
+                msg = "Unable to operate"
+            elif login_data['returnCode'] == 100:
+                code = 40013
+                msg = "You are already logged in"
+            elif login_data['returnCode'] == 1:
+                ticket_data = get_ticket(userId)
+                if ticket_data['returnCode'] == 0:
+                    logout(userId, accessCode, timestamp)
+                    code = 40014
+                    msg = "Error: This info should never appears"
+                elif ticket_data['returnCode'] == 1:
+                    logout(userId, accessCode, timestamp)
+                    code = 200
+                    msg = "Success"
+    data = jsonify({"code": code, "msg": msg})
+    return data
