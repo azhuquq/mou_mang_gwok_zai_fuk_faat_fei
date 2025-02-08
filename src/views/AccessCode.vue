@@ -38,8 +38,8 @@
                 <div class="text-sm text-gray-500 w-full">{{ t('accessCode.privacyModeTip') }}</div>
             </div>
         </div>
-        <div v-if="errorCode" class="flex flex-col items-center justify-center gap-4">
-            {{ getErrorMessage(errorCode) }}
+        <div v-if="errorCode || isLoadingError" class="flex flex-col items-center justify-center gap-4">
+            <div v-if="errorCode"> {{ getErrorMessage(errorCode) }} </div>
             <v-btn @click="getAccessCode" v-if="isLoadingError" color="primary" variant="outlined">{{
                 t('common.retry') }}</v-btn>
         </div>
