@@ -91,6 +91,7 @@ const getAccessCode = () => {
         isLoading.value = false
         if (res.data.code === 200) {
             accessCode.value = res.data.data
+            errorCode.value = null
             isLoaded.value = true
         } else {
             errorCode.value = res.data.code
