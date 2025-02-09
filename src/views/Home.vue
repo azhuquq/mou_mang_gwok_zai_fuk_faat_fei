@@ -5,7 +5,7 @@
         <!-- 有 NFC 且有权限 -->
         <div v-if="hasNFC() && nfcPermission === 'granted'"
           class="flex flex-col items-center justify-center text-center gap-4">
-          <v-icon size="x-large" class="mt-12">mdi:credit-card-scan-outline</v-icon>
+          <v-icon size="96" class="mt-12">mdi:credit-card-scan-outline</v-icon>
           <div class="text-2xl">{{ t('home.promptReadCard') }} </div>
           <v-btn variant="outlined" :color="stateStore.readAccessCodeMode ? 'primary' : 'default'"
             @click="stateStore.readAccessCodeMode = !stateStore.readAccessCodeMode">
