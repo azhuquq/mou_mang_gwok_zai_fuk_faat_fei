@@ -50,7 +50,7 @@
   "accessCode": {
     "yourAccessCodeText": "呢張咭嘅access code係",
     "shortcut": "捷徑",
-    "privacyModeTip": "貼士：私隱模式開左嘅時候，閣下仲係可以通過揀一下「Aimeサービスサイト」來快速登記呢張咭"
+    "privacyModeTip": "貼士：私隱模式開咗嘅時候，閣下仲係可以通過揀一下「Aimeサービスサイト」來快速登記呢張咭"
   },
   "getsnguide": {
     "step1": "用支持NFC嘅機去AppStore (iPhone)或者Google Play (Android)度download「NFC Tools」",
